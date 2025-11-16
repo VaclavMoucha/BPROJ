@@ -1,9 +1,11 @@
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".SecondHeaderContainer");
 const button = document.getElementById("langButton");
+const button2 = document.getElementById("langButton2");
+const buttons = [button, button2];
 let lang = "cs";
 
-button.addEventListener("click", () => {
+buttons.forEach(btn =>{btn.addEventListener("click", () => {
   console.log("click");
   if (lang === "cs") {
     lang = "en";
@@ -19,7 +21,7 @@ button.addEventListener("click", () => {
     }
   });
 });
-
+});
 
 hamburger.addEventListener("click", () => {
   console.log("click");
