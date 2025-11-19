@@ -1,11 +1,70 @@
+* {
+  box-sizing: border-box;
+  font-family: Noto Sans Mono, WOFF2;
+}
 html,
 body,
 #root {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: rgb(40, 40, 40);
+  background-color: var(--tittlePageBackgroundColor);
   color: white;
+}
+:root {
+  --marginFooter: 40px;
+  --mainBackgroung: white;
+  --tulColor: #ea7603;
+  --headerHeight: 75px;
+  --navBarFontSize: 1.2em;
+  --footerSize: 250px;
+  --footerFontSize: 1em;
+  --LeftPageMargin: 200px;
+  --logo3Size: 600px;
+  --rightPageMargin: 200px;
+  --logoSize: 100px;
+  --tittlePageFontSize: 1.5em;
+  --tittlePageBackgroundColor: #fc9024;
+  --paddingLeftSide: 235px;
+  --tittlePageHeight: 100px;
+  --contentBlockFontSize: 1.1em;
+}
+.tittlePage {
+  font-size: var(--tittlePageFontSize);
+  justify-content: center;
+  height: var(--tittlePageHeight);
+  background-color: var(--tittlePageBackgroundColor);
+  padding-left: 10px;
+  padding-top: 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+.contentWindow {
+  margin-left: var(--LeftPageMargin);
+  margin-right: var(--rightPageMargin);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: var(--tittlePageBackgroundColor);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+  height: auto;
+}
+.contentBlock li {
+  padding-bottom: 15px;
+}
+.contentBlock h2 {
+  padding-top: 15px;
+}
+.contentBlock {
+  background-color: var(--tulColor);
+  height: 450px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: var(--contentBlockFontSize);
 }
 .headerContainer {
   width: 100%;
@@ -14,13 +73,11 @@ body,
   align-items: center;
   flex-direction: row;
   list-style-type: none;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
 }
 .navB {
   margin: 40px;
-  height: 100%;
-  padding-top: 37px;
-  font-family: Noto Sans Mono, WOFF2;
-  font-size: 1.1em;
+  font-size: var(--navBarFontSize);
   background-color: transparent;
   transition: background-color 0.3s ease;
   text-decoration: none;
@@ -31,8 +88,9 @@ body,
   cursor: pointer;
 }
 .Mainheader .headerContainer li:first-child {
-  margin-right: 0;
-  margin-left: 200px;
+  margin-right: 50px;
+  margin-left: 160px;
+  margin-bottom: 35px;
 }
 .container {
   min-height: 100vh;
@@ -44,8 +102,8 @@ a {
   color: inherit;
 }
 .Mainheader {
-  background-color: rgba(234, 118, 3, 0.7);
-  height: 75px;
+  background-color: var(--tulColor);
+  height: var(--headerHeight);
   position: fixed;
   top: 0;
   left: 0;
@@ -60,20 +118,20 @@ a {
 .main {
   flex: 1;
   overflow: auto;
-  padding-top: 10vh;
+  padding-top: var(--headerHeight);
   padding-bottom: 100px;
-
 }
 
 .logo {
   background-image: url("../img/tul-fm_zkratka_cz_white_RGB.png");
   background-repeat: no-repeat;
   position: relative;
-  background-size: 100px;
-  width: 100px;
-  height: 40px;
+  background-size: var(--logoSize);
+  width: var(--logoSize);
+  height: 30px;
   display: inline-block;
   text-indent: -999999px;
+  justify-content: center;
 }
 .hamburger {
   display: none;
@@ -93,54 +151,52 @@ a {
   display: none;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(234, 118, 3,0.9);
+  background-color: rgba(234, 118, 3, 0.9);
   position: fixed;
   top: 59px;
   left: 0;
   right: 0;
   z-index: 999;
   list-style-type: none;
-  
 }
 .navBLogo {
   display: none;
 }
+
 .logoRadky {
-  width: 600px;
+  width: var(--logo3Size);
   height: auto;
   margin-bottom: 10px;
   background-repeat: no-repeat;
 }
-.kontakty {
-  margin-left: auto;
-  padding-left: 40px;
-  height: 100%;
-  font-family: Noto Sans Mono, WOFF2;
+.footerContent {
+  margin-left: var(--LeftPageMargin);
 }
-.social {
+.footerContent2 {
   margin-left: auto;
-  margin-right: 200px;
-  font-family: Noto Sans Mono, WOFF2;
+  margin-right: var(--rightPageMargin);
 }
 .Mainfooter {
-  background-color: rgba(234, 118, 3, 0.7);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+  background-color: var(--tulColor);
   color: white;
-  height: 350px;
+  height: var(--footerSize);
   display: flex;
   align-items: center;
   flex-direction: row;
   backdrop-filter: blur(5px);
-  margin-top: auto;
-  font-size: 1.0em;
+  font-size: var(--footerFontSize);
   white-space: nowrap;
 }
 .test {
   height: 1500px;
+  width: 100%;
 }
 @media (max-width: 1540px) {
   .navBLogo {
     display: flex;
     margin-right: 65vw;
+    margin-top: 10px;
   }
   .headerContainer {
     display: none;
@@ -150,28 +206,37 @@ a {
     display: flex;
     margin-right: 0px;
   }
-  .logoRadky{
-    width:37vw;
-
+  .logoRadky {
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+  }
+  .contentWindow {
+    margin-left: 50px;
+    margin-right: 50px;
+    grid-template-columns: 1fr;
   }
 }
 @media (max-width: 1024px) {
   .Mainfooter {
-    height: 450px;
+    height: auto;
     flex-direction: column;
-    font-size: 1em;
+    font-size: auto;
     white-space: normal;
+    align-items: center;
     width: 100%;
   }
-  .kontakty {
-    margin-left: 40px;
+  .footerContent {
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 20px;
   }
   .logoRadky {
-    width: 50vw;
     margin-bottom: 40px;
-    margin-left: auto;
-    padding-left: 80px;
+    margin-left: var(--LeftPageMargin);
+    margin-right: auto;
+    width: 400px;
   }
 }
 @media (max-width: 375px) {
@@ -181,9 +246,6 @@ a {
   }
   .navBLogo {
     display: flex;
-    margin-right: 45vw;
+    margin-right: 40vh;
   }
 }
-
-
-
