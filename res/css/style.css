@@ -2,18 +2,20 @@
   box-sizing: border-box;
   font-family: Noto Sans Mono, WOFF2;
 }
+
 html,
 body,
 #root {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: var(--tittlePageBackgroundColor);
+  background: var(--mainBackground);
   color: white;
 }
+
 :root {
   --marginFooter: 40px;
-  --mainBackgroung: white;
+  --mainBackground: white;
   --tulColor: #ea7603;
   --headerHeight: 75px;
   --navBarFontSize: 1.2em;
@@ -29,43 +31,49 @@ body,
   --tittlePageHeight: 100px;
   --contentBlockFontSize: 1.1em;
 }
+
 .tittlePage {
   font-size: var(--tittlePageFontSize);
   justify-content: center;
   height: var(--tittlePageHeight);
-  background-color: var(--tittlePageBackgroundColor);
+  background-color: var(--tulColor);
   padding-left: 10px;
   padding-top: 30px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
 }
+
 .contentWindow {
   margin-left: var(--LeftPageMargin);
   margin-right: var(--rightPageMargin);
   margin-top: 30px;
   margin-bottom: 30px;
-  background-color: var(--tittlePageBackgroundColor);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   padding: 20px;
   height: auto;
+  border-radius: 20px;
 }
+
 .contentBlock li {
   padding-bottom: 15px;
 }
+
 .contentBlock h2 {
+  border-bottom: 3px solid white;
   padding-top: 15px;
 }
+
 .contentBlock {
   background-color: var(--tulColor);
-  height: 450px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+  height: 450px;  
   margin-bottom: 20px;
   border-radius: 10px;
   padding-left: 30px;
   padding-right: 30px;
   font-size: var(--contentBlockFontSize);
 }
+
 .headerContainer {
   width: 100%;
   height: 100%;
@@ -74,7 +82,9 @@ body,
   flex-direction: row;
   list-style-type: none;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+
 }
+
 .navB {
   margin: 40px;
   font-size: var(--navBarFontSize);
@@ -83,24 +93,29 @@ body,
   text-decoration: none;
   color: white;
 }
+
 .navB:hover {
   color: rgb(247, 201, 155);
   cursor: pointer;
 }
+
 .Mainheader .headerContainer li:first-child {
   margin-right: 50px;
   margin-left: 160px;
   margin-bottom: 35px;
 }
+
 .container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
+
 .Mainheader {
   background-color: var(--tulColor);
   height: var(--headerHeight);
@@ -133,6 +148,7 @@ a {
   text-indent: -999999px;
   justify-content: center;
 }
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -140,6 +156,7 @@ a {
   margin-left: auto;
   margin-right: 150px;
 }
+
 .lines {
   width: 30px;
   height: 3px;
@@ -147,6 +164,7 @@ a {
   margin: 4px 0;
   transition: 0.4s;
 }
+
 .SecondHeaderContainer {
   display: none;
   flex-direction: column;
@@ -159,6 +177,7 @@ a {
   z-index: 999;
   list-style-type: none;
 }
+
 .navBLogo {
   display: none;
 }
@@ -169,13 +188,16 @@ a {
   margin-bottom: 10px;
   background-repeat: no-repeat;
 }
+
 .footerContent {
   margin-left: var(--LeftPageMargin);
 }
+
 .footerContent2 {
   margin-left: auto;
   margin-right: var(--rightPageMargin);
 }
+
 .Mainfooter {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
   background-color: var(--tulColor);
@@ -188,64 +210,145 @@ a {
   font-size: var(--footerFontSize);
   white-space: nowrap;
 }
+
+.tittle {
+  display: none;
+}
+
 .test {
   height: 1500px;
   width: 100%;
 }
-@media (max-width: 1540px) {
+
+@media (max-width: 1480px) {
+  :root {
+    --LeftPageMargin: 50px;
+    --rightPageMargin: 50px;
+    --logo3Size: 425px;
+  }
+
   .navBLogo {
     display: flex;
-    margin-right: 65vw;
+    margin-right: var(--rightPageMargin);
+    margin-left: var(--LeftPageMargin);
     margin-top: 10px;
   }
+
+  .tittle {
+    display: flex;
+    margin-left: var(--LeftPageMargin);
+    margin-right: 35vw;
+    font-size: 1.2em;
+  }
+
   .headerContainer {
     display: none;
   }
 
   .hamburger {
     display: flex;
-    margin-right: 0px;
+    margin-right: var(--rightPageMargin);
   }
+
   .logoRadky {
     margin-bottom: 40px;
     margin-left: auto;
     margin-right: auto;
-    width: 400px;
+    width: var(--logo3Size);
+
   }
+
   .contentWindow {
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: var(--LeftPageMargin);
+    margin-right: var(--rightPageMargin);
     grid-template-columns: 1fr;
   }
+
+  .footerContent {
+    margin-left: var(--LeftPageMargin);
+  }
+
+  .footerContent2 {
+    margin-right: var(--rightPageMargin);
+    padding-right: 0px;
+  }
+
 }
-@media (max-width: 1024px) {
+
+@media (max-width: 1200px) {
+  :root {
+    --LeftPageMargin: 30px;
+    --rightPageMargin: 30px;
+    --logo3Size: 400px;
+  }
+
+ 
+
+  .tittle {
+    display: flex;
+    margin-left: 50px;
+    margin-right: auto;
+    font-size: 1.1em;
+  }
+
   .Mainfooter {
     height: auto;
-    flex-direction: column;
+    flex-direction: column-reverse;
     font-size: auto;
     white-space: normal;
-    align-items: center;
     width: 100%;
   }
+
   .footerContent {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
+
   }
+
   .logoRadky {
-    margin-bottom: 40px;
-    margin-left: var(--LeftPageMargin);
+    width: var(--logo3Size);
+  }
+
+  .footerContent2 {
+    margin-top: 40px;
+
+  }
+
+  .navBLogo {
+    display: flex;
     margin-right: auto;
-    width: 400px;
+    margin-left: var(--LeftPageMargin);
+    margin-top: 10px;
+  }
+   .contentWindow{
+    font-size: 0.8em;
   }
 }
+
 @media (max-width: 375px) {
   .hamburger {
     display: flex;
-    margin-right: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
   }
+
   .navBLogo {
     display: flex;
-    margin-right: 40vh;
+    margin-right: 20px;
+    margin-left: 20px;
   }
+
+  .logoRadky {
+    margin-bottom: 20px;
+    width: 250px;
+  }
+
+  .tittle {
+    display: flex;
+    margin-left: auto;
+
+    font-size: 0.8em;
+  }
+ 
+
 }
