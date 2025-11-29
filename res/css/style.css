@@ -9,42 +9,40 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
-  background: var(--mainBackground);
-  color: white;
+  background: var(--background);
+  color: var(--text-color);
 }
 
 :root {
-  --marginFooter: 40px;
-  --mainBackground: white;
-  --tulColor: #ea7603;
-  --headerHeight: 75px;
-  --navBarFontSize: 1.2em;
-  --footerSize: 250px;
-  --footerFontSize: 1em;
-  --LeftPageMargin: 200px;
-  --logo3Size: 600px;
-  --rightPageMargin: 200px;
-  --logoSize: 100px;
-  --tittlePageFontSize: 1.5em;
-  --tittlePageBackgroundColor: #fc9024;
-  --paddingLeftSide: 235px;
-  --tittlePageHeight: 100px;
-  --contentBlockFontSize: 1.1em;
+  --text-color :#ffffff;
+  --background: #121212;
+  --primary: #ea7603;
+  --header-height: 75px;
+  --fs-navbar: 1.2em;
+  --footer-size: 250px;
+  --fs-footer: 1em;
+  --logo-large-size: 600px;
+  --page-margin: 200px;
+  --logo-size: 100px;
+  --fs-tittle: 1.5em;
+  --secondary: #252525;
+  --tittle-page-height: 100px;
+  --fs-content: 1.1em;
 }
 
 .tittlePage {
-  font-size: var(--tittlePageFontSize);
+  font-size: var(--fs-tittle);
   justify-content: center;
-  height: var(--tittlePageHeight);
-  background-color: var(--tulColor);
+  height: var(--tittle-page-height);
+  background-color: var(--secondary);
   padding-left: 10px;
   padding-top: 30px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
 }
 
 .contentWindow {
-  margin-left: var(--LeftPageMargin);
-  margin-right: var(--rightPageMargin);
+  margin-left: var(--page-margin);
+  margin-right: var(--page-margin);
   margin-top: 30px;
   margin-bottom: 30px;
   display: grid;
@@ -65,13 +63,13 @@ body,
 }
 
 .contentBlock {
-  background-color: var(--tulColor);
+  background-color: var(--secondary);
   height: 450px;  
   margin-bottom: 20px;
   border-radius: 10px;
   padding-left: 30px;
   padding-right: 30px;
-  font-size: var(--contentBlockFontSize);
+  font-size: var(--fs-content);
 }
 
 .headerContainer {
@@ -87,9 +85,9 @@ body,
 
 .navB {
   margin: 40px;
-  font-size: var(--navBarFontSize);
+  font-size: var(--fs-navbar);
   background-color: transparent;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s ease;
   text-decoration: none;
   color: white;
 }
@@ -101,7 +99,7 @@ body,
 
 .Mainheader .headerContainer li:first-child {
   margin-right: 50px;
-  margin-left: 160px;
+  margin-left: var(--page-margin);
   margin-bottom: 35px;
 }
 
@@ -117,8 +115,8 @@ a {
 }
 
 .Mainheader {
-  background-color: var(--tulColor);
-  height: var(--headerHeight);
+  background-color: var(--primary);
+  height: var(--header-height);
   position: fixed;
   top: 0;
   left: 0;
@@ -133,7 +131,7 @@ a {
 .main {
   flex: 1;
   overflow: auto;
-  padding-top: var(--headerHeight);
+  padding-top: var(--header-height);
   padding-bottom: 100px;
 }
 
@@ -141,8 +139,8 @@ a {
   background-image: url("../img/tul-fm_zkratka_cz_white_RGB.png");
   background-repeat: no-repeat;
   position: relative;
-  background-size: var(--logoSize);
-  width: var(--logoSize);
+  background-size: var(--logo-size);
+  width: var(--logo-size);
   height: 30px;
   display: inline-block;
   text-indent: -999999px;
@@ -183,31 +181,31 @@ a {
 }
 
 .logoRadky {
-  width: var(--logo3Size);
+  width: var(--logo-large-size);
   height: auto;
   margin-bottom: 10px;
   background-repeat: no-repeat;
 }
 
 .footerContent {
-  margin-left: var(--LeftPageMargin);
+  margin-left: var(--page-margin);
 }
 
 .footerContent2 {
   margin-left: auto;
-  margin-right: var(--rightPageMargin);
+  margin-right: var(--page-margin);
 }
 
 .Mainfooter {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
-  background-color: var(--tulColor);
+  background-color: var(--primary);
   color: white;
-  height: var(--footerSize);
+  height: var(--footer-size);
   display: flex;
   align-items: center;
   flex-direction: row;
   backdrop-filter: blur(5px);
-  font-size: var(--footerFontSize);
+  font-size: var(--fs-footer);
   white-space: nowrap;
 }
 
@@ -222,21 +220,21 @@ a {
 
 @media (max-width: 1480px) {
   :root {
-    --LeftPageMargin: 50px;
-    --rightPageMargin: 50px;
-    --logo3Size: 425px;
+    --page-margin: 50px;
+    --page-margin: 50px;
+    --logo-large-size: 425px;
   }
 
   .navBLogo {
     display: flex;
-    margin-right: var(--rightPageMargin);
-    margin-left: var(--LeftPageMargin);
+    margin-right: var(--page-margin);
+    margin-left: var(--page-margin);
     margin-top: 10px;
   }
 
   .tittle {
     display: flex;
-    margin-left: var(--LeftPageMargin);
+    margin-left: var(--page-margin);
     margin-right: 35vw;
     font-size: 1.2em;
   }
@@ -247,29 +245,28 @@ a {
 
   .hamburger {
     display: flex;
-    margin-right: var(--rightPageMargin);
+    margin-right: var(--page-margin);
   }
 
   .logoRadky {
     margin-bottom: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    width: var(--logo3Size);
+    
+    width: var(--logo-large-size);
 
   }
 
   .contentWindow {
-    margin-left: var(--LeftPageMargin);
-    margin-right: var(--rightPageMargin);
+    margin-left: var(--page-margin);
+    margin-right: var(--page-margin);
     grid-template-columns: 1fr;
   }
 
   .footerContent {
-    margin-left: var(--LeftPageMargin);
+    margin-left: var(--page-margin);
   }
 
   .footerContent2 {
-    margin-right: var(--rightPageMargin);
+    margin-right: var(--page-margin);
     padding-right: 0px;
   }
 
@@ -277,9 +274,9 @@ a {
 
 @media (max-width: 1200px) {
   :root {
-    --LeftPageMargin: 30px;
-    --rightPageMargin: 30px;
-    --logo3Size: 400px;
+    --page-margin: 30px;
+    --page-margin: 30px;
+    --logo-large-size: 400px;
   }
 
  
@@ -287,7 +284,7 @@ a {
   .tittle {
     display: flex;
     margin-left: 50px;
-    margin-right: auto;
+    margin-right: 35vw;
     font-size: 1.1em;
   }
 
@@ -300,31 +297,65 @@ a {
   }
 
   .footerContent {
-    margin-left: auto;
+    margin-left: var(--page-margin);
     margin-right: auto;
 
   }
 
   .logoRadky {
-    width: var(--logo3Size);
+    width: var(--logo-large-size);
   }
 
   .footerContent2 {
     margin-top: 40px;
-
+    margin-right: var(--page-margin);
   }
 
   .navBLogo {
     display: flex;
     margin-right: auto;
-    margin-left: var(--LeftPageMargin);
+    margin-left: var(--page-margin);
     margin-top: 10px;
   }
    .contentWindow{
     font-size: 0.8em;
   }
 }
+@media (max-width: 768px) {
+  :root {
+    --page-margin: 20px;
+    --page-margin: 20px;
+    --logo-large-size: 300px;
+    --contentBlockFontSize: 1em;
+  }
 
+  .tittle {
+    display: flex;
+    margin-left: 30px;
+    margin-right: 15vw;
+    font-size: 1em;
+  }
+
+  .logoRadky {
+    width: var(--logo-large-size);
+  }
+
+  .footerContent {
+    margin-left: var(--page-margin);
+    margin-right: auto;
+  }
+
+  .footerContent2 {
+    margin-right: var(--page-margin);
+  }
+
+  .navBLogo {
+    display: flex;
+    margin-right: auto;
+    margin-left: var(--page-margin);
+    margin-top: 10px;
+  }
+}
 @media (max-width: 375px) {
   .hamburger {
     display: flex;
