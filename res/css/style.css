@@ -87,7 +87,7 @@ body,
   margin: 40px;
   font-size: var(--fs-navbar);
   font-weight: 700;
-  letter-spacing: 0.08em;;
+  letter-spacing: 0.08em;
   background-color: transparent;
   transition: background-color 0.2s ease;
   text-decoration: none;
@@ -100,8 +100,13 @@ body,
 }
 
 .Mainheader .headerContainer li:first-child {
-  
+  margin-right: auto;
   margin-left: var(--page-margin);
+  margin-bottom: 35px;
+}
+.Mainheader .headerContainer li:last-child {
+  
+  margin-right: var(--page-margin);
   margin-bottom: 35px;
 }
 
@@ -199,7 +204,7 @@ a {
 }
 
 .Mainfooter {
-  font-family: Noto Sans Mono, WOFF2;
+  letter-spacing: 0.08em;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
   background-color: var(--primary);
   color: white;
@@ -213,6 +218,7 @@ a {
 }
 
 .tittle {
+  
   display: none;
 }
 
