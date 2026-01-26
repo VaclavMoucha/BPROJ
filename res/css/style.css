@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  font-family: Noto Sans Mono, WOFF2;
 }
 
 html,
@@ -11,6 +10,7 @@ body,
   padding: 0;
   background: var(--background);
   color: var(--text-color);
+  font-family: 'Inter', sans-serif;
 }
 
 :root {
@@ -18,14 +18,14 @@ body,
   --background: #121212;
   --primary: #ea7603;
   --header-height: 75px;
-  --fs-navbar: 1.2em;
+  --fs-navbar: 1.0em;
   --footer-size: 250px;
   --fs-footer: 1em;
-  --logo-large-size: 600px;
-  --page-margin: 200px;
+  --logo-large-size: 400px;
+  --page-margin: 175px;
   --logo-size: 100px;
   --fs-tittle: 1.5em;
-  --secondary: #252525;
+  --secondary: #404040;
   --tittle-page-height: 100px;
   --fs-content: 1.1em;
 }
@@ -36,7 +36,7 @@ body,
   height: var(--tittle-page-height);
   background-color: var(--secondary);
   padding-left: 10px;
-  padding-top: 30px;
+  padding-top: 35px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
 }
 
@@ -80,12 +80,14 @@ body,
   flex-direction: row;
   list-style-type: none;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
-
+ 
 }
 
 .navB {
   margin: 40px;
   font-size: var(--fs-navbar);
+  font-weight: 700;
+  letter-spacing: 0.08em;;
   background-color: transparent;
   transition: background-color 0.2s ease;
   text-decoration: none;
@@ -98,7 +100,7 @@ body,
 }
 
 .Mainheader .headerContainer li:first-child {
-  margin-right: 50px;
+  
   margin-left: var(--page-margin);
   margin-bottom: 35px;
 }
@@ -136,7 +138,7 @@ a {
 }
 
 .logo {
-  background-image: url("../img/tul-fm_zkratka_cz_white_RGB.png");
+  background-image: url("../img/logoWhite.png");
   background-repeat: no-repeat;
   position: relative;
   background-size: var(--logo-size);
@@ -197,6 +199,7 @@ a {
 }
 
 .Mainfooter {
+  font-family: Noto Sans Mono, WOFF2;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
   background-color: var(--primary);
   color: white;
@@ -222,7 +225,7 @@ a {
   :root {
     --page-margin: 50px;
     --page-margin: 50px;
-    --logo-large-size: 425px;
+    --logo-large-size: 300px;
   }
 
   .navBLogo {
@@ -276,7 +279,7 @@ a {
   :root {
     --page-margin: 30px;
     --page-margin: 30px;
-    --logo-large-size: 400px;
+    
   }
 
  
@@ -325,7 +328,7 @@ a {
   :root {
     --page-margin: 20px;
     --page-margin: 20px;
-    --logo-large-size: 300px;
+    --logo-large-size: 200px;
     --contentBlockFontSize: 1em;
   }
 
