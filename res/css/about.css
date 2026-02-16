@@ -1,0 +1,71 @@
+:root {
+  --fs-title: 1.4em;
+  --title-page-height: 85px;
+  --fs-content: 1em;
+  --titlePage-padding: 10px;
+}
+.titlePage {
+  font-size: var(--fs-title);
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  height: var(--title-page-height);
+  background-color: var(--secondary);
+  padding-left: var(--titlePage-padding);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+.contentWindow {
+  margin-left: var(--page-margin);
+  margin-right: var(--page-margin);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding-top: 20px;
+  height: auto;
+  border-radius: 20px;
+}
+
+.contentBlock li {
+  padding-bottom: 15px;
+}
+
+.contentBlock h2 {
+  border-bottom: 3px solid white;
+  padding-top: 15px;
+}
+
+.contentBlock {
+  background-color: var(--secondary);
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: var(--fs-content);
+}
+@media (max-width: 1580px) {
+  :root {
+    --fs-title: 1.2em;
+  }
+}
+@media (max-width: 1480px) {
+  .contentWindow {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --fs-title: 1.1em;
+    --fs-content: 0.8em;
+  }
+}
+@media (max-width: 768px) {
+  :root {
+    --fs-title: 1em;
+    --fs-content: 0.6em;
+  }
+}

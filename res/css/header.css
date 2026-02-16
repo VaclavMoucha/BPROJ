@@ -1,0 +1,152 @@
+:root {
+  --header-height: 75px;
+  --fs-navbar: 1em;
+  --logo-size: 12vw;
+}
+
+.logo {
+  background-image: url("../img/logoWhite.svg");
+  background-repeat: no-repeat;
+  width: var(--logo-size);
+  height: var(--header-height);
+  display: inline-block;
+  text-indent: -999999px;
+  background-size: contain;
+  background-position: center;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.lines {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.dropdownMenu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(234, 118, 3, 0.9);
+  position: fixed;
+  top: 56px;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  list-style-type: none;
+}
+
+.SecondHeaderContainer {
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.Mainheader {
+  background-color: var(--primary);
+  font-size: var(--fs-navbar);
+  height: var(--header-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 1000;
+  padding:0;
+  margin:0;}
+.headerContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  list-style-type: none;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+  padding: 0;
+  margin: 0;
+}
+
+.navB {
+  margin: 30px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  background-color: transparent;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+  color: white;
+}
+
+.navB:hover {
+  color: rgb(247, 201, 155);
+  cursor: pointer;
+}
+
+.Mainheader .headerContainer li:first-child {
+  margin-left: var(--page-margin);
+}
+.Mainheader .headerContainer li:last-child {
+  margin-right:var(--page-margin);
+}
+.Mainheader .SecondHeaderContainer li:first-child {
+  margin-left: var(--page-margin);
+}
+
+.SecondHeaderContainer li:nth-child(2) {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.SecondHeaderContainer li:last-child {
+  margin-left: auto;
+  margin-right: var(--page-margin);
+}
+@media (max-width: 1580px) {
+  :root {
+    --fs-navbar: 0.9em;
+  }
+}
+@media (max-width: 1480px) {
+  :root {
+    --fs-navbar: 1.2em;
+    --logo-size: 15vw;
+  }
+
+  .SecondHeaderContainer {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .headerContainer {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --fs-navbar: 0.9em;
+  }
+}
+@media (max-width: 376px) {
+  :root {
+    --fs-navbar: 0.6em;
+  }
+}

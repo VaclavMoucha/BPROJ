@@ -1,0 +1,54 @@
+:root {
+  --footer-size: auto;
+  --fs-footer: 1em;
+  --logo-large-size: 8vw;
+}
+.footerContent {
+  flex: 1;
+  margin-left: var(--page-margin);
+}
+
+.footerContent2 {
+  flex: 1;
+  background-image: url("../img/logoWhite.svg");
+  background-repeat: no-repeat;
+  height: var(--logo-large-size);
+  margin-left: auto;
+  margin-right: var(--page-margin);
+  background-position: right center;
+  background-size: contain;
+
+}
+
+.Mainfooter {
+  letter-spacing: 0.08em;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+  background-color: var(--primary);
+  color: white;
+  height: var(--footer-size);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  backdrop-filter: blur(5px);
+  font-size: var(--fs-footer);
+  white-space: nowrap;
+    padding:0;
+  margin:0;
+}
+@media (max-width: 1580px) {
+  :root {
+    --fs-footer: 0.9em;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --fs-footer: 0.6em;
+  }
+}
+@media (max-width: 376px) {
+  :root {
+    --fs-footer: 0.5em;
+  }
+}

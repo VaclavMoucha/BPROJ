@@ -1,7 +1,14 @@
 * {
   box-sizing: border-box;
 }
-
+:root {
+  --text-color :#ffffff;
+  --background: #121212;
+  --primary: #ea7603;
+  --secondary: #404040;
+  --page-margin:6vw;
+  --font-family: 'Inter', sans-serif;
+}
 html,
 body,
 #root {
@@ -10,105 +17,10 @@ body,
   padding: 0;
   background: var(--background);
   color: var(--text-color);
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-family);
 }
 
-:root {
-  --text-color :#ffffff;
-  --background: #121212;
-  --primary: #ea7603;
-  --header-height: 75px;
-  --fs-navbar: 1.0em;
-  --footer-size: 250px;
-  --fs-footer: 1em;
-  --logo-large-size: 400px;
-  --page-margin: 175px;
-  --logo-size: 100px;
-  --fs-tittle: 1.5em;
-  --secondary: #404040;
-  --tittle-page-height: 100px;
-  --fs-content: 1.1em;
-}
 
-.tittlePage {
-  font-size: var(--fs-tittle);
-  justify-content: center;
-  height: var(--tittle-page-height);
-  background-color: var(--secondary);
-  padding-left: 10px;
-  padding-top: 35px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
-}
-
-.contentWindow {
-  margin-left: var(--page-margin);
-  margin-right: var(--page-margin);
-  margin-top: 30px;
-  margin-bottom: 30px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  padding: 20px;
-  height: auto;
-  border-radius: 20px;
-}
-
-.contentBlock li {
-  padding-bottom: 15px;
-}
-
-.contentBlock h2 {
-  border-bottom: 3px solid white;
-  padding-top: 15px;
-}
-
-.contentBlock {
-  background-color: var(--secondary);
-  height: 450px;  
-  margin-bottom: 20px;
-  border-radius: 10px;
-  padding-left: 30px;
-  padding-right: 30px;
-  font-size: var(--fs-content);
-}
-
-.headerContainer {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  list-style-type: none;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
- 
-}
-
-.navB {
-  margin: 40px;
-  font-size: var(--fs-navbar);
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  background-color: transparent;
-  transition: background-color 0.2s ease;
-  text-decoration: none;
-  color: white;
-}
-
-.navB:hover {
-  color: rgb(247, 201, 155);
-  cursor: pointer;
-}
-
-.Mainheader .headerContainer li:first-child {
-  margin-right: auto;
-  margin-left: var(--page-margin);
-  margin-bottom: 35px;
-}
-.Mainheader .headerContainer li:last-child {
-  
-  margin-right: var(--page-margin);
-  margin-bottom: 35px;
-}
 
 .container {
   min-height: 100vh;
@@ -121,20 +33,6 @@ a {
   color: inherit;
 }
 
-.Mainheader {
-  background-color: var(--primary);
-  height: var(--header-height);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  z-index: 1000;
-}
-
 .main {
   flex: 1;
   overflow: auto;
@@ -142,253 +40,8 @@ a {
   padding-bottom: 100px;
 }
 
-.logo {
-  background-image: url("../img/logoWhite.png");
-  background-repeat: no-repeat;
-  position: relative;
-  background-size: var(--logo-size);
-  width: var(--logo-size);
-  height: 30px;
-  display: inline-block;
-  text-indent: -999999px;
-  justify-content: center;
-}
-
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  margin-left: auto;
-  margin-right: 150px;
-}
-
-.lines {
-  width: 30px;
-  height: 3px;
-  background-color: white;
-  margin: 4px 0;
-  transition: 0.4s;
-}
-
-.SecondHeaderContainer {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgba(234, 118, 3, 0.9);
-  position: fixed;
-  top: 59px;
-  left: 0;
-  right: 0;
-  z-index: 999;
-  list-style-type: none;
-}
-
-.navBLogo {
-  display: none;
-}
-
-.logoRadky {
-  width: var(--logo-large-size);
-  height: auto;
-  margin-bottom: 10px;
-  background-repeat: no-repeat;
-}
-
-.footerContent {
-  margin-left: var(--page-margin);
-}
-
-.footerContent2 {
-  margin-left: auto;
-  margin-right: var(--page-margin);
-}
-
-.Mainfooter {
-  letter-spacing: 0.08em;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
-  background-color: var(--primary);
-  color: white;
-  height: var(--footer-size);
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  backdrop-filter: blur(5px);
-  font-size: var(--fs-footer);
-  white-space: nowrap;
-}
-
-.tittle {
-  
-  display: none;
-}
-
 .test {
   height: 1500px;
   width: 100%;
 }
 
-@media (max-width: 1480px) {
-  :root {
-    --page-margin: 50px;
-    --page-margin: 50px;
-    --logo-large-size: 300px;
-  }
-
-  .navBLogo {
-    display: flex;
-    margin-right: var(--page-margin);
-    margin-left: var(--page-margin);
-    margin-top: 10px;
-  }
-
-  .tittle {
-    display: flex;
-    margin-left: var(--page-margin);
-    margin-right: 35vw;
-    font-size: 1.2em;
-  }
-
-  .headerContainer {
-    display: none;
-  }
-
-  .hamburger {
-    display: flex;
-    margin-right: var(--page-margin);
-  }
-
-  .logoRadky {
-    margin-bottom: 40px;
-    
-    width: var(--logo-large-size);
-
-  }
-
-  .contentWindow {
-    margin-left: var(--page-margin);
-    margin-right: var(--page-margin);
-    grid-template-columns: 1fr;
-  }
-
-  .footerContent {
-    margin-left: var(--page-margin);
-  }
-
-  .footerContent2 {
-    margin-right: var(--page-margin);
-    padding-right: 0px;
-  }
-
-}
-
-@media (max-width: 1200px) {
-  :root {
-    --page-margin: 30px;
-    --page-margin: 30px;
-    
-  }
-
- 
-
-  .tittle {
-    display: flex;
-    margin-left: 50px;
-    margin-right: 35vw;
-    font-size: 1.1em;
-  }
-
-  .Mainfooter {
-    height: auto;
-    flex-direction: column-reverse;
-    font-size: auto;
-    white-space: normal;
-    width: 100%;
-  }
-
-  .footerContent {
-    margin-left: var(--page-margin);
-    margin-right: auto;
-
-  }
-
-  .logoRadky {
-    width: var(--logo-large-size);
-  }
-
-  .footerContent2 {
-    margin-top: 40px;
-    margin-right: var(--page-margin);
-  }
-
-  .navBLogo {
-    display: flex;
-    margin-right: auto;
-    margin-left: var(--page-margin);
-    margin-top: 10px;
-  }
-   .contentWindow{
-    font-size: 0.8em;
-  }
-}
-@media (max-width: 768px) {
-  :root {
-    --page-margin: 20px;
-    --page-margin: 20px;
-    --logo-large-size: 200px;
-    --contentBlockFontSize: 1em;
-  }
-
-  .tittle {
-    display: flex;
-    margin-left: 30px;
-    margin-right: 15vw;
-    font-size: 1em;
-  }
-
-  .logoRadky {
-    width: var(--logo-large-size);
-  }
-
-  .footerContent {
-    margin-left: var(--page-margin);
-    margin-right: auto;
-  }
-
-  .footerContent2 {
-    margin-right: var(--page-margin);
-  }
-
-  .navBLogo {
-    display: flex;
-    margin-right: auto;
-    margin-left: var(--page-margin);
-    margin-top: 10px;
-  }
-}
-@media (max-width: 375px) {
-  .hamburger {
-    display: flex;
-    margin-right: 20px;
-    margin-left: 20px;
-  }
-
-  .navBLogo {
-    display: flex;
-    margin-right: 20px;
-    margin-left: 20px;
-  }
-
-  .logoRadky {
-    margin-bottom: 20px;
-    width: 250px;
-  }
-
-  .tittle {
-    display: flex;
-    margin-left: auto;
-
-    font-size: 0.8em;
-  }
- 
-
-}
