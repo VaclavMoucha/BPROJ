@@ -13,6 +13,12 @@
   --font-family: "Inter", sans-serif;
   --hover-color: rgb(247, 201, 155);
   --secondary-hover-color: #333;
+  --header-height: 75px;
+  --fs-navbar: clamp(0.4rem, 1.2vw, 1rem);
+  --logo-size: 12vw;
+  --footer-size: auto;
+  --fs-footer: clamp(0.4rem, 1.2vw, 1rem);
+  --logo-large-size: 8vw;
 }
 html,
 body,
@@ -44,6 +50,7 @@ a {
   flex: 1;
   overflow: visible;
   padding-top: var(--header-height);
+  
 }
 .hero-block {
   padding: 6rem var(--page-margin) 4rem;

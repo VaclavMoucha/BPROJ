@@ -1,8 +1,4 @@
-:root {
-  --footer-size: auto;
-  --fs-footer: clamp(0.4rem, 1.2vw, 1rem);
-  --logo-large-size: 8vw;
-}
+
 .footer-content {
   flex: 1;
   margin-left: var(--page-margin);
@@ -42,6 +38,6 @@
   flex-direction: row;
   align-items: center;
   width: 100%;
-  max-width: 1920px;  
+  
   margin: 0 auto;
 }
