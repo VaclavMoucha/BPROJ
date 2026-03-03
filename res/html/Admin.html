@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header id="header"></header>
+      <div class="main">
+        <div class="hero-block">
+          <h1>
+            <span data-en="ARTICLE" data-cs="SPRÁVA">SPRÁVA</span>
+            <span class="highlight" data-en="MANAGMENT" data-cs="ČLÁNKŮ"
+              >ČLÁNKŮ</span
+            >
+          </h1>
+        </div>
+
+        <div class="admin-panel">
+          <form id="article-form" class="article-form">
+            <div class="form-group">
+              <label data-en="Title (CS)" data-cs="Název (CS)"
+                >Název (CS)</label
+              >
+              <input type="text" id="title_cs" required />
+            </div>
+            <div class="form-group">
+              <label data-en="Title (EN)" data-cs="Název (EN)"
+                >Název (EN)</label
+              >
+              <input type="text" id="title_en" required />
+            </div>
+            <div class="form-group">
+              <label
+                data-en="Short description (CS)"
+                data-cs="Krátký popis (CS)"
+                >Krátký popis (CS)</label
+              >
+              <textarea id="perex_cs" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+              <label
+                data-en="Short description (EN)"
+                data-cs="Krátký popis (EN)"
+                >Krátký popis (EN)</label
+              >
+              <textarea id="perex_en" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+              <label data-en="Content (CS)" data-cs="Obsah (CS)"
+                >Obsah (CS)</label
+              >
+              <textarea id="content_cs" rows="8" required></textarea>
+            </div>
+            <div class="form-group">
+              <label data-en="Content (EN)" data-cs="Obsah (EN)"
+                >Obsah (EN)</label
+              >
+              <textarea id="content_en" rows="8" required></textarea>
+            </div>
+            <div class="form-group">
+              <label data-en="Image URL" data-cs="URL obrázku"
+                >URL obrázku</label
+              >
+              <input type="text" id="img" placeholder="https://..." />
+            </div>
+            <button
+              type="submit"
+              class="admin-btn"
+              data-en="Add article"
+              data-cs="Přidat článek"
+            >
+              Přidat článek
+            </button>
+          </form>
+          <h2 data-en="Existing articles" data-cs="Existující články">
+            Existující články
+          </h2>
+          <div id="admin-article-list"></div>
+        </div>
+      </div>
+      <footer id="footer"></footer>
+    </div>
+    <script src="/js/header.js"></script>
+    <script src="/js/admin.js"></script>
+  </body>
+</html>

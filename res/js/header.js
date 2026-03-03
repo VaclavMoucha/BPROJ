@@ -30,8 +30,9 @@ buttons.forEach((btn) => {
     }
 
     localStorage.setItem("lang", lang);
-
     updateLanguage();
+    if (typeof renderList === 'function') renderList()
+    if (typeof renderDetail === 'function') renderDetail()
   });
 });
 hamburger.addEventListener("click", () => {
