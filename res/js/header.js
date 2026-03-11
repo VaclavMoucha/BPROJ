@@ -44,8 +44,9 @@ hamburger.addEventListener("click", () => {
   }
 });
 window.addEventListener("resize", () => {
-  if (window.innerWidth > 1520) {
+  if (window.innerWidth > 900) {
     navMenu.style.display = "none";
   }
 });
 }
+initHeader();

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="../img/favicon.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Sans+Mono:wght@100..900&display=swap"
       rel="stylesheet"
@@ -20,101 +21,92 @@
   <body>
     <header id="header"></header>
     <div class="container">
-      <div class="main">
-        <div class="hero-block">
-          <p class="label" data-en="CONTACTS" data-cs="KONTAKTY">KONTAKTY</p>
-          <h1>
-            <span data-en="LABORATORY OF" data-cs="LABORATOŘ">LABORATOŘ</span>
-            <span class="highlight" data-en="BATTERY" data-cs="BATERIOVÝCH">BATERIOVÝCH</span>
-            <span data-en="SYSTEMS" data-cs="SYSTÉMŮ">SYSTÉMŮ</span>
-            <span class="highlight" data-en="AND" data-cs="A">A</span>
-            <span data-en="EMOBILITY" data-cs="EMOBILITY">EMOBILITY</span>
-          </h1>
+      <div class="page-wrapper">
+        <div class="main">
+          <section class="contacts">
+            <div class="contacts-location">
+              <h2 data-en="Where to find us" data-cs="Kde nás najdete">
+                Kde nás najdete
+              </h2>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1305.313772127901!2d15.07545363573841!3d50.774004802144105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4709341bbda32cbd%3A0xbca06f703faa2e6d!2sCXI%20-%20%C3%9Astav%20pro%20nanomateri%C3%A1ly%2C%20pokro%C4%8Dil%C3%A9%20technologie%20a%20inovace%20TUL%20-%20budova%20L!5e1!3m2!1scs!2scz!4v1771790552474!5m2!1scs!2scz"
+                allowfullscreen=""
+                loading="lazy"
+              >
+              </iframe>
+            </div>
+
+            <div class="contacts-list">
+              <h2 data-en="Contacts" data-cs="Kontakty">Kontakty</h2>
+
+              <div class="contact-card">
+                <div class="contact-icon">📍</div>
+                <div class="contact-info">
+                  <span class="contact-label" data-en="Address" data-cs="Adresa"
+                    >Adresa</span
+                  >
+                  <span class="contact-value"
+                    >Studentská 1402/2<br />461 17 Liberec 1</span
+                  >
+                </div>
+              </div>
+
+              <div class="contact-card">
+                <div class="contact-icon">📞</div>
+                <div class="contact-info">
+                  <span class="contact-label" data-en="Phone" data-cs="Telefon"
+                    >Telefon</span
+                  >
+                  <span class="contact-value">+420 485 351 111</span>
+                </div>
+              </div>
+
+              <div class="contact-card">
+                <div class="contact-icon">✉️</div>
+                <div class="contact-info">
+                  <span class="contact-label" data-en="E-mail" data-cs="E-mail"
+                    >E-mail</span
+                  >
+                  <span class="contact-value">fm@tul.cz</span>
+                </div>
+              </div>
+
+              <a
+                href="https://www.fm.tul.cz"
+                target="_blank"
+                class="contact-card"
+              >
+                <div class="contact-icon">🌐</div>
+                <div class="contact-info">
+                  <span class="contact-label" data-en="Website" data-cs="Web"
+                    >Web</span
+                  >
+                  <span class="contact-value">www.fm.tul.cz</span>
+                </div>
+              </a>
+
+              <a
+                href="https://www.facebook.com/FMTUL"
+                target="_blank"
+                class="contact-card"
+              >
+                <div class="contact-icon">📘</div>
+                <div class="contact-info">
+                  <span
+                    class="contact-label"
+                    data-en="Facebook"
+                    data-cs="Facebook"
+                    >Facebook</span
+                  >
+                  <span class="contact-value">facebook.com/FMTUL</span>
+                </div>
+              </a>
+            </div>
+          </section>
         </div>
-
-        <section class="contacts">
-          <div class="contacts-location">
-            <h2 data-en="Where to find us" data-cs="Kde nás najdete">
-              Kde nás najdete
-            </h2>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1305.313772127901!2d15.07545363573841!3d50.774004802144105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4709341bbda32cbd%3A0xbca06f703faa2e6d!2sCXI%20-%20%C3%9Astav%20pro%20nanomateri%C3%A1ly%2C%20pokro%C4%8Dil%C3%A9%20technologie%20a%20inovace%20TUL%20-%20budova%20L!5e1!3m2!1scs!2scz!4v1771790552474!5m2!1scs!2scz"
-              allowfullscreen=""
-              loading="lazy"
-            >
-            </iframe>
-          </div>
-
-          <div class="contacts-list">
-            <h2 data-en="Contacts" data-cs="Kontakty">Kontakty</h2>
-
-            <div class="contact-card">
-              <div class="contact-icon">📍</div>
-              <div class="contact-info">
-                <span class="contact-label" data-en="Address" data-cs="Adresa"
-                  >Adresa</span
-                >
-                <span class="contact-value"
-                  >Studentská 1402/2<br />461 17 Liberec 1</span
-                >
-              </div>
-            </div>
-
-            <div class="contact-card">
-              <div class="contact-icon">📞</div>
-              <div class="contact-info">
-                <span class="contact-label" data-en="Phone" data-cs="Telefon"
-                  >Telefon</span
-                >
-                <span class="contact-value">+420 485 351 111</span>
-              </div>
-            </div>
-
-            <div class="contact-card">
-              <div class="contact-icon">✉️</div>
-              <div class="contact-info">
-                <span class="contact-label" data-en="E-mail" data-cs="E-mail"
-                  >E-mail</span
-                >
-                <span class="contact-value">fm@tul.cz</span>
-              </div>
-            </div>
-
-            <div class="contact-card">
-              <div class="contact-icon">🌐</div>
-              <div class="contact-info">
-                <span class="contact-label" data-en="Website" data-cs="Web"
-                  >Web</span
-                >
-                <span class="contact-value">
-                  <a href="https://www.fm.tul.cz" target="_blank"
-                    >www.fm.tul.cz</a
-                  >
-                </span>
-              </div>
-            </div>
-
-            <div class="contact-card">
-              <div class="contact-icon">📘</div>
-              <div class="contact-info">
-                <span
-                  class="contact-label"
-                  data-en="Facebook"
-                  data-cs="Facebook"
-                  >Facebook</span
-                >
-                <span class="contact-value">
-                  <a href="https://www.facebook.com/FMTUL" target="_blank"
-                    >facebook.com/FMTUL</a
-                  >
-                </span>
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
-      <footer id="footer"></footer>
     </div>
+    <footer id="footer"></footer>
   </body>
 
   <script src="/js/header.js"></script>

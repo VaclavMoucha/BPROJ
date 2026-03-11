@@ -1,4 +1,61 @@
+.main-header {
+  display: flex;
+  background-color: var(--primary-color);
+  font-size: var(--fs-navbar);
+  height: var(--header-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 0;
+  margin: 0;
+}
 
+.header-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  list-style-type: none;
+  padding: 0;
+  max-width: var(--page-size);
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.second-header-container {
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.navB {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  background-color: transparent;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+}
+.navB a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 1.2rem;
+}
+.navB:hover {
+  color: var(--hover-color);
+  cursor: pointer;
+}
 .logo {
   background-repeat: no-repeat;
   width: var(--logo-size);
@@ -8,7 +65,11 @@
   background-size: contain;
   background-position: center;
 }
-
+.navB:first-child a {
+  display: flex;
+  align-items: center;
+  padding: calc(var(--header-height) * 0.2);
+}
 .hamburger {
   display: none;
   flex-direction: column;
@@ -27,110 +88,69 @@
 .dropdownMenu {
   display: none;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   background-color: var(--primary-color);
-  opacity: 0.9;
   position: fixed;
-  top: 56px;
+  top: var(--header-height);
   left: 0;
   right: 0;
   z-index: 999;
   list-style-type: none;
+  padding: 0.5rem 1.5rem;
+  margin: 0;
+  box-shadow: 0 8px 16px var(--secondary-color);
+  border-top: 2px solid var(--secondary-color);
 }
 
-.second-header-container {
+.dropdownMenu .navB {
   width: 100%;
-  height: 100%;
-  display: none;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-.main-header {
-  background-color: var(--primary-color);
-  font-size: var(--fs-navbar);
-  height: var(--header-height);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  padding: 0;
-  margin: 0;
-}
-.header-container {
-  width: 100%;    
-  margin: 0 auto; 
-  height: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  list-style-type: none;
-  
-  padding: 0;
+  border-bottom: 1px solid var(--secondary-color);
 }
 
-.navB {
-  margin: 30px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  background-color: transparent;
-  transition: background-color 0.2s ease;
-  text-decoration: none;
+.dropdownMenu .navB:last-child {
+  border-bottom: none;
 }
 
-.navB:hover {
-  color: var(--hover-color);
-  cursor: pointer;
+.dropdownMenu .navB a {
+  display: block;
+  padding: 0.85rem 0;
+  width: 100%;
 }
 
-.main-header .header-container li:first-child {
-  margin-left: var(--page-margin);
+.header-container li:first-child {
   margin-right: auto;
+  padding: 0;
 }
-.main-header .header-container li:last-child {
-  margin-right: var(--page-margin);
-}
-.main-header .second-header-container li:first-child {
-  margin-left: var(--page-margin);
-}
-
 .second-header-container li:last-child {
   margin-left: auto;
-  margin-right: var(--page-margin);
 }
-@media (max-width: 1480px) {
-  :root {
-    --logo-size: 15vw;
+
+@media (max-width: 1300px) {
+  .header-container {
+    max-width: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .second-header-container li:first-child {
+    margin-left: var(--page-margin);
+  }
+  .second-header-container li:last-child {
+    margin-right: var(--page-margin);
   }
 
   .second-header-container {
     display: flex;
-    justify-content: flex-start;
   }
   .header-container {
     display: none;
   }
-
   .hamburger {
     display: flex;
   }
 }
+
 @media (max-width: 520px) {
   :root {
     --logo-size: 40vw;
-  }
-  
-}
-@media (min-width: 1920px) {
-  :root {
-    --page-margin: 4rem;
-    --logo-size: 10vw;
   }
 }

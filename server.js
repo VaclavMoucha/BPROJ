@@ -52,7 +52,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/about", (req, res) => {
-  res.send(renderPage("About.html"));
+  res.send(renderPage("about.html"));
 });
 app.get("/contacts", (req, res) => {
   res.send(renderPage("contacts.html"));
