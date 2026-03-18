@@ -138,14 +138,20 @@
     margin-right: var(--page-margin);
   }
 
-  .second-header-container {
+ .js .second-header-container {
     display: flex;
   }
-  .header-container {
+  .js .header-container {
     display: none;
   }
-  .hamburger {
+  .js .hamburger {
     display: flex;
+  }
+  .no-js .header-container li:first-child{
+    margin-right: 0;
+  }
+   .no-js .header-container .navB a{
+    padding: 5px;
   }
 }
 

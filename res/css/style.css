@@ -353,16 +353,76 @@ a {
   max-width: 700px;
 }
 
-.delete-btn {
+.admin-action-btn {
   padding: 0.4rem 1rem;
+  
   background: #c0392b;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-size: 0.85rem;
+  
+}
+.drop-zone {
+  border: 2px dashed #aaa;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  color: #aaa;
+  margin-top: 0.5rem;
+ 
 }
 
+.drop-zone:hover,
+.drop-zone.dragover {
+  border-color: orange;
+  background: rgba(255, 165, 0, 0.08);
+  color: orange;
+}
+
+#preview {
+  margin-top: 1rem;
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.admin-article-btns{
+  display:flex;
+  flex-direction: row;
+  gap:0.8rem; 
+}
+.block-buttons button {
+  background: transparent;
+  border: 2px dashed #aaa;
+  color: #aaa;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.block-buttons button:hover {
+  border-color: orange;
+  color: orange;
+}
+.admin-text-area {
+  width: 100%;
+  min-height: 250px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.admin-text-area:focus {
+  outline: none;
+  border-color: orange;
+}
 /*About*/
 
 .about-wrapper {
