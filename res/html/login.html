@@ -1,44 +1,43 @@
 <!doctype html>
-<html lang="cs" class = "no-js">
+<html lang="cs" class="no-js">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LBSE</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="icon" href="../img/favicon.png">
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="icon" href="../img/favicon.png" />
   </head>
   <body>
     <div class="container">
       <header id="header"></header>
       <div class="page-wrapper">
-      <div class="main">
-        <div class="hero-block">
-          <h1>
-            <span data-en="Admin" data-cs="Admin">ADMIN</span><br>
-            <span class="highlight" data-en="LOGIN" data-cs="PŘIHLÁŠENÍ"
-              >PŘIHLÁŠENÍ</span
-            >
-          </h1>
-          <div class="login-form">
-            <div class="form-group">
-              <label>Jméno</label>
-              <input type="text" id="username" />
+        <div class="main">
+          <div class="hero-block">
+            <h1>
+              <span data-en="Admin" data-cs="Admin">ADMIN</span><br />
+              <span class="highlight" data-en="LOGIN" data-cs="PŘIHLÁŠENÍ"
+                >PŘIHLÁŠENÍ</span
+              >
+            </h1>
+            <div class="login-form">
+              <div class="form-group">
+                <label>Jméno</label>
+                <input type="text" id="username" />
+              </div>
+              <div class="form-group">
+                <label>Heslo</label>
+                <input type="password" id="password" />
+              </div>
+              <p id="login-error" class="login-error"></p>
+              <button class="admin-btn" onclick="login()">Přihlásit</button>
             </div>
-            <div class="form-group">
-              <label>Heslo</label>
-              <input type="password" id="password" />
-            </div>
-            <p id="login-error" class="login-error"></p>
-            <button class="admin-btn" onclick="login()">Přihlásit</button>
           </div>
         </div>
       </div>
-      </div>
-    </div><footer id="footer"></footer>
-    <script src="/js/header.js"></script>
-    <script src="/js/footer.js"></script>
+    </div>
+    <footer id="footer"></footer>
     <script>
       async function login() {
         const username = document.getElementById("username").value;
@@ -58,6 +57,13 @@
             "Špatné jméno nebo heslo";
         }
       }
+    </script>
+    <script src="/js/articles.js"></script>
+    <script src="/js/header.js"></script>
+    <script>
+      document.documentElement.classList.remove("no-js");
+      document.documentElement.classList.add("js");
+      initHeader();
     </script>
   </body>
 </html>
