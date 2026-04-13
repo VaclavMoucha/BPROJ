@@ -86,11 +86,11 @@
 }
 
 .dropdownMenu {
-  display: none;
+  display: None;
   flex-direction: column;
   align-items: stretch;
   background-color: var(--primary-color);
-  position: fixed;
+  position: fixed; 
   top: var(--header-height);
   left: 0;
   right: 0;
