@@ -7,7 +7,6 @@ const session = require("express-session");
 const multer = require("multer");
 const Article = require("./models/Article");
 const fs = require("fs");
-
 const app = express();
 const upload = multer({ dest: "res/img/uploads/" });
 
@@ -25,7 +24,7 @@ app.use(
 
 mongoose
   .connect(process.env.MONGO_URI)
-  .then(() => console.log("MongoDB připojeno"))
+  .then(() => console.log("MongoDB připojenoo"))
   .catch((err) => console.error(err));
 
 function loadPartial(filePath) {
@@ -154,6 +153,7 @@ app.get("/partners", (req, res) => {
 app.get("/login", (req, res) => {
   res.send(renderPage("login.html"));
 });
+
 
 app.get("/admin", (req, res) => {
   if (!req.session.admin) return res.redirect("/login");
