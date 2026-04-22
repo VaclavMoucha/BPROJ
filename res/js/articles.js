@@ -1,42 +1,41 @@
 function getLang() {
   return localStorage.getItem("lang") || "cs";
 }
-
-function applyLang(lang) {
-  document.querySelectorAll("[data-cs][data-en]").forEach((el) => {
-    el.textContent = el.dataset[lang] || el.textContent;
-  });
+function formatDate(date) {
+  return new Date(date).toLocaleDateString(
+    getLang() === "cs" ? "cs-CZ" : "en-US",
+  );
 }
-
 function renderBlocksClient(blocks, fallback) {
-  if (blocks && blocks.length > 0) {
-    return blocks.map(b => {
-      if (b.type === 'text') return `<p class="article-block-text">${b.content}</p>`
-      if (b.type === 'image') return `<img class="article-block-img" src="${b.content}" alt="" />`
-      return ''
-    }).join('')
+  if (blocks && blocks.length != 0) {
+    return blocks
+      .map((block) => {
+        if (block.type === "text")
+          return `<p class ="article-block-text">${block.content}</p>`;
+        if (block.type === "image")
+          return `<img class="article-block-image" src="${block.content}" alt="Obrázek">`;
+        return "";
+      })
+      .join("");
   }
-  return fallback ? `<p class="article-block-text">${fallback}</p>` : ''
+  return fallback ? `<p class="article-block-text">${fallback}</p>` : "";
 }
-
 async function renderList() {
   const list = document.querySelector(".article-list");
+  const lang = getLang();
   if (!list) return;
-
   try {
     const res = await fetch("/api/articles");
     const articles = await res.json();
-    const lang = getLang();
-
     list.innerHTML = articles
       .map(
-        (a) => `
-      <a href="/article/${a._id}" class="article-card">
-        <img src="${a.img || "/img/placeholder.jpg"}" alt="${a["title_" + lang]}" />
+        (article) => `
+      <a href="/article/${article._id}" class="article-card">
+        <img src="${article.img || "/img/placeholder.jpg"}" alt="${article["title_" + lang]}" />
         <div class="article-info">
-          <h2 data-cs="${a.title_cs}" data-en="${a.title_en}">${a["title_" + lang]}</h2>
-          <span class="article-date">${new Date(a.date).toLocaleDateString("cs-CZ")}</span>
-          <p data-cs="${a.perex_cs}" data-en="${a.perex_en}">${a["perex_" + lang]}</p>
+          <h2 data-cs="${article.title_cs}" data-en="${article.title_en}">${article["title_" + lang]}</h2>
+          <span class="article-date">${formatDate(article.date)}</span>
+          <p data-cs="${article.perex_cs}" data-en="${article.perex_en}">${article["perex_" + lang]}</p>
         </div>
       </a>
     `,
@@ -46,22 +45,18 @@ async function renderList() {
     console.warn("articles.js: fetch selhal, používám SSR obsah", err);
   }
 }
-
-async function renderDetail() {
+async function renderArticle(){
   const detail = document.querySelector(".article-detail");
   if (!detail) return;
-
-  const id = window.location.pathname.split("/").pop();
+  const lang = getLang();
+  const id = window.location.pathname.split("/").pop();   
   if (!id || !/^[a-fA-F0-9]{24}$/.test(id)) return;
-
   try {
     const res = await fetch(`/api/articles/${id}`);
     const article = await res.json();
-    const lang = getLang();
-
     detail.innerHTML = `
-      <h1 data-cs="${article.title_cs}" data-en="${article.title_en}">${article["title_" + lang]}</h1>
-      <span class="article-date">${new Date(article.date).toLocaleDateString("cs-CZ")}</span>
+    <h1 data-cs="${article.title_cs}" data-en="${article.title_en}">${article["title_" + lang]}</h1>
+      <span class="article-date">${formatDate(article.date)}</span>
       <img src="${article.img || "/img/placeholder.jpg"}" alt="${article["title_" + lang]}" />
       <div class="article-content">
         ${renderBlocksClient(article["blocks_" + lang], article["content_" + lang])}
@@ -71,6 +66,5 @@ async function renderDetail() {
     console.warn("articles.js: fetch selhal, používám SSR obsah", err);
   }
 }
-
 renderList();
-renderDetail();
+renderArticle();
