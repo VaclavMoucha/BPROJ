@@ -42,7 +42,7 @@ async function renderList() {
       )
       .join("");
   } catch (err) {
-    console.warn("articles.js: fetch selhal, používám SSR obsah", err);
+    console.warn("articles.js: fetch selhal", err);
   }
 }
 async function renderArticle(){
@@ -63,7 +63,7 @@ async function renderArticle(){
       </div>
     `;
   } catch (err) {
-    console.warn("articles.js: fetch selhal, používám SSR obsah", err);
+    console.warn("articles.js: fetch selhal", err);
   }
 }
 renderList();
