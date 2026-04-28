@@ -21,7 +21,7 @@
   --logo-large-size: 8vw;
   --tul-font: "Noto Sans Mono", "Inter", sans-serif;
   --page-size: 1300px;
-  --index-image-height:700px;
+  --index-image-height:35vw;
 }
 html,
 body,
@@ -167,6 +167,7 @@ a {
   left: 0;
   z-index: 0;
   pointer-events: none;
+  
 }
 .index-hero-content {
   width: 100%;
@@ -719,6 +720,10 @@ a {
 
 
 @media (max-width: 768px) {
+  :root{
+
+    --index-image-height: 50vw;
+  }
   .contacts {
     flex-direction: column;
     margin-bottom: 5vh;
